@@ -1,0 +1,34 @@
+body {
+	font-family: Helvetica;
+}
+
+.nav {
+	list-style: none;
+	width: 300px;
+	margin: 10px auto;
+	height: 60px;
+}
+
+.nav li {
+	display: inline-block;
+	margin: 5px 10px;
+	font-size: 24px;
+	font-weight: 100;
+	letter-spacing: 2px;
+	border-bottom: 1px solid Plum;
+	transition: 0.2s;
+}
+
+.nav li a {
+	text-decoration: none;
+	color: Plum;
+}
+
+.nav li:hover {
+	transform: translateY(-5px);
+	border-bottom: 10px solid Plum;
+}
+
+.copyright {
+	text-align: center;
+}

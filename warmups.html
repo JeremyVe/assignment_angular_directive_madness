@@ -1,0 +1,58 @@
+<html ng-app='directiveMadness'>
+<head>
+	<title>Angular Directive Madness</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<script type="text/javascript" src='app.js'></script>
+
+</head>
+<body>
+	<main-nav></main-nav>
+
+	<main-header>Main Header Here !</main-header>
+
+	<p ng-if='!radioValue'>No Number is Selected</p>
+	<p ng-if='radioValue % 2 === 0'>The Number is Even</p>
+	<p ng-if='radioValue % 2 !== 0' ng-hide='!radioValue'>The Number is Odd</p>
+	<p ng-if='radioValue'>The Value is {{ radioValue }}</p>
+
+	<form>
+		<label>1</label>
+		<input type='radio' ng-model='radioValue' value='1'>
+
+		<label>2</label>
+		<input type='radio' ng-model='radioValue' value='2'>
+
+		<label>3</label>
+		<input type='radio' ng-model='radioValue' value='3'>
+
+		<label>4</label>
+		<input type='radio' ng-model='radioValue' value='4'>
+
+		<label>5</label>
+		<input type='radio' ng-model='radioValue' value='5'>
+	</form>
+
+	<p colorize color='white' background="RoyalBlue">Hello This is a color Test</p>
+
+	<p ng-mousedown="statusClick = 'DOWN'" ng-mouseup="statusClick = 'UP'">Mouse button is : 
+		<span ng-if='statusClick === "DOWN"'>DOWN</span>
+		<span ng-if='statusClick === "UP"'>UP</span>
+	</p>
+
+	<p ng-mouseenter='statusHover = "HOVER"' ng-mouseleave='statusHover = "LEAVE"'>Hover state is :
+		<span ng-if='statusHover === "HOVER"'>HOVER</span>
+		<span ng-if='statusHover === "LEAVE"'>LEAVE</span>
+	</p>
+
+	<button ng-dblclick='statusDblClick = "DOUBLE"'>
+		<span ng-if='statusDblClick !== "DOUBLE"'>I'm clickable</span>
+		<span ng-if='statusDblClick === "DOUBLE"'>I'm double clickable</span>
+	</button>
+
+	<copyright>The Web Company</copyright>
+
+</body>
+</html>
