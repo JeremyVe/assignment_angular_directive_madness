@@ -1,16 +1,20 @@
 body {
 	font-family: Helvetica;
+	margin: 10px 30px;
 }
 
+/*
+	Nav Bar
+*/
+
 .nav {
-	list-style: none;
-	width: 300px;
-	margin: 10px auto;
+	display: flex;
+	justify-content: center;
+	list-style: none;	
 	height: 60px;
 }
 
 .nav li {
-	display: inline-block;
 	margin: 5px 10px;
 	font-size: 24px;
 	font-weight: 100;
@@ -29,6 +33,38 @@ body {
 	border-bottom: 10px solid Plum;
 }
 
+/*
+	Footer
+*/
+
 .copyright {
 	text-align: center;
+}
+
+/*
+	Quotes
+*/
+
+.quote {
+	position: relative;
+	width: 500px;
+}
+
+.delete-button {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+input.ng-invalid {
+	border: 1px solid Crimson;
+}
+
+input.ng-valid {
+	border: 1px solid LimeGreen;
+}
+
+input.ng-pristine {
+	border: 1px solid #aaa;
 }

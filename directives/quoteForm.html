@@ -1,0 +1,11 @@
+<form name='formQuote' ng-submit='submit(formQuote.$valid, formQuote)'>
+	<label>Quote</label><br>
+	<span ng-show='!formQuote.message.$pristine && formQuote.message.$invalid'>A Quote should be present</span><br>
+	<input type='text' ng-minlength='2' required name='message' ng-model='formData.message'><br>
+
+	<label>Author</label><br>
+	<span ng-show='!formQuote.author.$pristine && formQuote.author.$invalid'>Author name between 2 and 32 characters</span><br>
+	<input type='text' ng-minlength='2' ng-maxlength='32' required name='author' ng-model='formData.author'><br>
+
+	<input ng-show='formQuote.$valid' type='submit'>
+</form>
